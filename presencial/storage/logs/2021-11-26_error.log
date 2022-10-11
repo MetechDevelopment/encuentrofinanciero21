@@ -1,0 +1,15 @@
+[26-Nov-2021 11:10:56 Europe/Madrid] Fallo en request a API: Client error: `POST https://api2.trackitsuite.com/api/v2/registrations` resulted in a `403 Forbidden` response:
+{
+    "message": "Inscripci\u00f3n duplicada, el email usado ya est\u00e1 registrado en el evento"
+}
+
+[26-Nov-2021 11:10:58 Europe/Madrid] Fallo en request a API: Client error: `POST https://api2.trackitsuite.com/api/v2/registrations` resulted in a `403 Forbidden` response:
+{
+    "message": "Inscripci\u00f3n duplicada, el email usado ya est\u00e1 registrado en el evento"
+}
+
+[26-Nov-2021 11:11:12 Europe/Madrid] Fallo en request a API: Client error: `POST https://api2.trackitsuite.com/api/v2/registrations` resulted in a `403 Forbidden` response:
+{
+    "message": "Inscripci\u00f3n duplicada, el email usado ya est\u00e1 registrado en el evento"
+}
+

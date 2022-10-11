@@ -1,0 +1,3 @@
+[23-Apr-2019 12:38:51 Europe/Madrid] Fallo en request a API: Client error: `POST https://api2.trackitsuite.com.localhost/api/v2/registrations` resulted in a `401 Unauthorized` response:
+{"message":"Unauthenticated."}
+

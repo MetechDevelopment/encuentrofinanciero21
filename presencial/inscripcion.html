@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Registro | Eventos y Conferencias de Unidad Editorial</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="https://www.eventosyconferenciasue.com/css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="https://www.eventosyconferenciasue.com/css/revolution/settings.css">
+    <link rel="stylesheet" type="text/css" href="https://www.eventosyconferenciasue.com/css/revolution/layers.css">
+    <link rel="stylesheet" type="text/css" href="https://www.eventosyconferenciasue.com/css/revolution/navigation.css">
+    <link rel="stylesheet" type="text/css" href="https://www.eventosyconferenciasue.com/css/style.css?v42">
+
+    <!-- <link rel="stylesheet" type="text/css" href="https://www.eventosyconferenciasue.com/css/color/blue.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://www.eventosyconferenciasue.com/fonts/icons.css?v1">
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" language="javascript" src="https://e00-ue.uecdn.es/cookies/js/policy_v3_utf8.js"></script>
+    <script type="text/javascript" src="https://sdk.privacy-center.org/loader.js" data-key="03f1af55-a479-4c1f-891a-7481345171ce" id="spcloader" async></script>
+    <script type="text/javascript" language="javascript" src="https://e00-ue.uecdn.es/cookies/js/gdpr_dfp.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    <!--[if IE]>
+        <style>
+            .gallery-logos-footer img {
+                margin: 0 20px;
+            }
+            .header-elmundo {
+                width: 140px;
+                height: 17.73px;
+            }
+            .header-expansion {
+                width: 117.85px;
+                height: 20px;
+            }
+            .header-marca {
+                width: 79.36px;
+                height: 22px;
+            }
+            .header-telva {
+                width: 93.41px;
+                height: 25px;
+            }
+            .header-yodona {
+                width: 36.3px;
+                height: 40px;
+            }
+            .header-correofarma {
+                width: 105.55px;
+                height: 33px;
+            }
+            .header-diariomedico {
+                width: 150px;
+                height: 15.88px;
+            }
+        </style>
+    <![endif]-->
+</head>
+
+<body>
+    <main class="container">
+        <div class="wrapper" id="register">
+            <h2 class="section-title text-center pt-20">Regístrate completando el siguiente formulario</h2>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12">
+                </div>
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <div class="alert alert-info text-center" role="alert">
+                        Te estás registrando para inscribirte a <strong>XII Encuentro Sector Financiero</strong>.
+                    </div>
+                    <div id="error_message" class="alert alert-danger hidden" role="alert">
+                        <div class="text"></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+                    <!-- <div class="alert alert-danger">
+                        <strong>Aforo Completo</strong>
+                    </div> -->
+                    <form role="form" method="POST" id="registration_form" action="send.php">
+                        <input type="hidden" name="product_id" value="387">
+                        <div class="form-group">
+                            <div class="col-xs-12 col-md-4">
+                                <label class="control-label" for="product_id">Jornadas</label>
+                            </div>
+                            <div class="col-xs-12 col-md-8">
+                                <p><small>¿A que jornadas quieres asistir?</small></p>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="product_id[]" value="439"> 
+                                        <span class="cr"></span>
+                                        <p>Día 1: 29 de noviembre</p>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="product_id[]" value="440">
+                                        <span class="cr"></span>
+                                        <p>Día 2: 30 de noviembre</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12 col-md-4">
+                                <label class="control-label" for="first_name">Nombre</label>
+                            </div>
+                            <div class="col-xs-12 col-md-8">
+                                <input type="text" class="form-control" name="first_name" value="" required>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12 col-md-4">
+                                <label class="control-label" for="last_name">Apellidos</label>
+                            </div>
+                            <div class="col-xs-12 col-md-8">
+                                <input type="text" class="form-control" name="last_name" value="" required>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12 col-md-4">
+                                <label class="control-label" for="email">E-Mail</label>
+                            </div>
+                            <div class="col-xs-12 col-md-8">
+                                <input type="email" class="form-control" name="email" value="" required>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4" for="phone">Teléfono</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="text" name="phone" id="phone" value="" required>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4" for="company">Empresa</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="text" name="company" id="company" value="" required>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4" for="position">Cargo</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="text" name="position" id="position" value="" required>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <hr>
+                        <div class="form-group checkbox">
+                            <label>
+                                <input type="checkbox" name="mayor_de_edad" value="1" required>
+                                <span class="cr"></span>
+                                <p>Confirmo que soy mayor de 18 años.</p>
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <label>
+                                <input type="checkbox" name="legal" value="1" required>
+                                <span class="cr"></span>
+                                <p>Al registrarte declaras aceptar los <a href="https://www.eventosyconferenciasue.com/corporativo/aviso-legal" target="_blank">términos y condiciones de uso</a>, la <a href="https://www.eventosyconferenciasue.com/corporativo/proteccion-datos" target="_blank">política de privacidad</a> y la <a href="http://cookies.unidadeditorial.es" target="_blank">política de cookies</a>.</p>
+                            </label>
+                        </div>
+
+                        <div class="form-group radio">
+                            <p>Deseo recibir información sobre eventos, promociones, sorteos y otras comunicaciones comerciales sobre productos, servicios y contenidos del <a role="button" data-toggle="collapse" href="#sociedades" aria-expanded="false" aria-controls="collapseExample">Grupo Unidad Editorial</a>, y/o de terceros de distintos <a role="button" data-toggle="collapse" href="#sectores" aria-expanded="false" aria-controls="collapseExample">sectores</a>, incluido por medios electrónicos. Por favor,
+                                <a href="https://www.eventosyconferenciasue.com/corporativo/proteccion-datos" target="_blank">consulta aquí</a>
+                                la información detallada y dinos si estás de acuerdo.
+                            </p>
+                            <label class="radio-inline">
+                                <input type="radio" name="info" value="1" required> <span class="cr"></span> Si
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="info" value="0"> <span class="cr"></span> No
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <p class="small" style="margin-top:15px">
+                                <strong>Responsable</strong>: Unidad Editorial, S.A.
+                                <strong>Finalidades</strong>: Gestión de su registro, facilitar formación e información al usuario registrado; el envío de comunicaciones comerciales sobre productos y servicios propios similares a los que haya contratado; y de terceros. <strong>Legitimación</strong>: Ejecución del contrato, interés legítimo y consentimiento del interesado. <strong>Destinatarios</strong>: Prestadores de servicios, y terceras empresas cuando sea necesario para que Unidad Editorial pueda cumplir, desarrollar, controlar y ejecutar la relación contractual establecida entre usted y Unidad Editorial. <strong>Derechos</strong>: Tiene derecho a acceder, rectificar y suprimir los datos, así como a revocar su consentimiento y otros derechos, como se explica en la información adicional detallada que puede consultar en la
+                                <a href="https://www.eventosyconferenciasue.com/corporativo/proteccion-datos" target="_blank">Política de Privacidad</a>
+                            </p>
+                        </div>
+
+                        <div class="collapse" id="sectores">
+                            <div class="well">
+                                <p>Editorial, medios de comunicación, comercio electrónico, deportes, náutico, viajes, motor, música, audiovisual, tecnología, hogar, ocio, hostelería, restauración, alimentación y nutrición, cosmética, moda, formación, productos de lujo, servicios financieros, servicios profesionales, productos o servicios ofrecidos por grandes superficies, juegos de azar y apuestas, agroalimentario, agua, banca, deporte, educación y cultura, energía, farmacéutico, hostelería y turismo, industria, infraestructuras y construcción, logistica y distribución , marketing, medioambiente, publicidad, recursos humanos, sanitario, seguros, tecnología e innovación, telecos y transporte</p>
+                            </div>
+                        </div>
+
+                        <div class="collapse" id="sociedades">
+                            <div class="well">
+                                <table class="table table-responsive table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <p><strong>Universo</strong></p>
+                                            </th>
+                                            <th>
+                                                <p><strong>Accesible a través de las URLs</strong></p>
+                                            </th>
+                                            <th>
+                                                <p><strong>Sociedad titular</strong></p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p>EL MUNDO</p>
+                                            </td>
+                                            <td>
+                                                <p><a href="http://www.elmundo.es/">www.elmundo.es</a>
+                                                    <br /><a href="http://www.elmundo.es/metropoli.html">metropoli.elmundo.es</a>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p>Unidad Editorial Información General, S.L.U.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>ORBYT</p>
+                                            </td>
+                                            <td>
+                                                <p><a href="http://www.orbyt.es/">www.orbyt.es</a></p>
+                                            </td>
+                                            <td>
+                                                <p>Unidad Editorial Información General, S.L.U.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Expansión</p>
+                                            </td>
+                                            <td>
+                                                <p><a href="http://www.expansion.com/actualidadeconomica.html">www.expansion.com/actualidadeconomica.html</a>
+                                                    <br /><a href="http://www.expansion.com/">www.expansion.com</a>
+                                                    <br /><a href="http://www.fueradeserie.com/">www.fueradeserie.com</a>
+                                                    <br /><a href="http://nauta360.expansion.com/">nauta360.expansion.com</a>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p>Unidad Editorial Información Económica, S.L.U.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Marca</p>
+                                            </td>
+                                            <td>
+                                                <p><a href="http://www.marca.com/">www.marca.com</a>
+                                                    <br /><a href="http://www.marca.com/radio.html">www.marca.com/radio.html</a>
+                                                    <br /><a href="http://www.supercodigo.marca.com/">www.supercodigo.marca.com</a>
+                                                    <br /><a href="http://www.marca.com/tiramillas.html">www.marca.com/tiramillas.html</a>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p>Unidad Editorial Información Deportiva, S.L.U.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Revistas</p>
+                                            </td>
+                                            <td>
+                                                <p><a href="http://www.elmundo.es/historia.html">www.elmundo.es/historia.html</a>
+                                                    <br /><a href="http://www.dmedicina.com/">www.dmedicina.com</a>
+                                                    <br /><a href="http://www.correofarmaceutico.com/">www.correofarmaceutico.com</a>
+                                                    <br /><a href="http://www.diariomedico.com/">www.diariomedico.com</a>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p>Unidad Editorial Revistas, S.L.U.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Revistas Lujo</p>
+                                            </td>
+                                            <td>
+                                                <p><a href="http://www.telva.com/">www.telva.com</a></p>
+                                            </td>
+                                            <td>
+                                                <p>Ediciones Cónica, S.A.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Formación</p>
+                                            </td>
+                                            <td>
+                                                <p><a href="http://www.escuelaunidadeditorial.es/">www.escuelaunidadeditorial.es</a></p>
+                                            </td>
+                                            <td>
+                                                <p>Unidad Editorial Formación, S.L.U.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Conferencias</p>
+                                            </td>
+                                            <td>
+                                                <p><a href="http://www.conferenciasyformacion.com/">www.conferenciasyformacion.com</a></p>
+                                            </td>
+                                            <td>
+                                                <p>Unidad Editorial, S.A.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Juego</p>
+                                            </td>
+                                            <td>
+                                                <p><a href="http://www.marcaapuestas.es/">www.marcaapuestas.es</a></p>
+                                            </td>
+                                            <td>
+                                                <p>Unidad Editorial Juego, S.A.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Otros</p>
+                                            </td>
+                                            <td>
+                                                <p><a href="http://www.esferalibros.com/">www.esferalibros.com</a>
+                                                    <br /><a href="http://www.uesyndication.com/">www.uesyndication.com</a>
+                                                    <br /><a href="http://www.elcultural.es/">www.elcultural.es</a>
+                                                    <br /><a href="http://www.unidadeditorial.com/">www.unidadeditorial.com</a>
+                                                    <br /><a href="http://www.unidadeditorial.es/">www.unidadeditorial.es</a>
+                                                    <br /><a href="http://www.veo.es/">www.veo.es</a>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-12 text-right">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    Registro
+                                    <i class="mdi-hardware-keyboard-arrow-right"></i>
+                                </button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="clearfix"></div>
+    <footer class="dark-wrapper inverse-text">
+        <div class="sub-footer dark-wrapper inverse-text">
+            <div class="container inner text-center">
+                <p>© 2019 Unidad Editorial S.A. Todos los derechos reservados | Web realizada por
+                    <a href="http://www.metech.es" target="_blank" alt="nofollow external noopener">Metech</a>
+                </p>
+            </div>
+        </div>
+        <ul class="social mobile-share social-bg social-m">
+            <li><a href="#0" class="sharer-btn"><i class="et-share"></i></a></li>
+            <li class="not-show"><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.x-encuentro-sector-financiero.com%2Fauth%2Fregister%3Fev%3D2186%3Fref%3Dtwitter&amp;text=X+Encuentro+Sector+Financiero" onclick="ga('send', 'event', 'Social', 'Twitter', 'XII Encuentro Sector Financiero');" class="share-twitter " data-type="tw" target="_blank" title="Compartir en Twitter" rel="nofollow"><i class="et-twitter"></i></a></li>
+            <li class="not-show"><a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.x-encuentro-sector-financiero.com%2Fauth%2Fregister%3Fev%3D2186%3Fref%3Dfacebook" onclick="ga('send', 'event', 'Social', 'Facebook', 'XII Encuentro Sector Financiero');" class="share-facebook " data-type="fb" target="_blank" title="Compartir en Facebook" rel="nofollow"><i class="et-facebook"></i></a></li>
+            <li class="not-show"><a href="http://www.linkedin.com/shareArticle?url=http%3A%2F%2Fwww.x-encuentro-sector-financiero.com%2Fauth%2Fregister%3Fev%3D2186%3Fref%3Dlinkedin&amp;mini=true&amp;title=X+Encuentro+Sector+Financiero" onclick="ga('send', 'event', 'Social', 'Linkedin', 'XII Encuentro Sector Financiero');" class="share-linkedin " data-type="lk" target="_blank" title="Compartir en Linkedin" rel="nofollow"><i class="et-linkedin"></i></a></li>
+            <li class="not-show"><a href="whatsapp://send?text= http%3A%2F%2Fwww.x-encuentro-sector-financiero.com%2Fauth%2Fregister%3Fev%3D2186%3Fref%3Dwhatsapp" data-action="share/whatsapp/share" onclick="ga('send', 'event', 'Social', 'Linkedin', 'XII Encuentro Sector Financiero');" class="share-whatsapp " data-type="wt" target="_blank" rel="nofollow"><i class="icom-whatsapp"></i></a></li>
+        </ul>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    <script src="https://www.eventosyconferenciasue.com/js/jquery.themepunch.tools.min.js"></script>
+    <script src="https://www.eventosyconferenciasue.com/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="https://www.eventosyconferenciasue.com/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="https://www.eventosyconferenciasue.com/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="https://www.eventosyconferenciasue.com/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="https://www.eventosyconferenciasue.com/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="https://www.eventosyconferenciasue.com/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="https://www.eventosyconferenciasue.com/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="https://www.eventosyconferenciasue.com/js/plugins.js?v=6"></script>
+    <script src="https://www.eventosyconferenciasue.com/js/scripts.js?v=7"></script>
+
+    <script src="https://www.eventosyconferenciasue.com/js/userarea.js?v2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <script src="js/form.js"></script>
+</body>
+
+</html>

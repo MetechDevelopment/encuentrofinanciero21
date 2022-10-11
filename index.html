@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>XII Encuentro Sector Financiero</title>
+    <meta name="description" content="Asesores financieros" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/assets/images/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Roboto CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+        integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', 'helvetica neue', Arial, sans-serif;
+            color: #333;
+            font-size: 17px;
+        }
+
+        a:hover {
+            color: inherit;
+        }
+
+        header {
+            background: url("img/header-1920.jpg") #fff center center no-repeat;
+            background-size: cover;
+            height: 1080px !important;
+            /* background-color: #ddd; */
+        }
+
+        header .container {
+            position: relative;
+        }
+
+        header a.claim {
+            display: none;
+            font-size: 14px;
+        }
+
+        header .social {
+            display: none;
+        }
+
+        .container {
+            max-width: 1700px !important;
+        }
+
+        .green-line,
+        .blue-line,
+        .red-line {
+            height: 10px;
+        }
+
+        .blue-line {
+            background-color: #878787;
+        }
+
+        .red-line {
+            background-color: #004250;
+        }
+
+        .green-line {
+            background-color: #666;
+        }
+
+        .text-red {
+            color: #E6241D;
+        }
+
+        .text-green {
+            color: #000;
+        }
+
+        main {
+            padding: 50px 0 80px;
+        }
+
+        section {
+            visibility: visible;
+            opacity: 1;
+            transition: visibility 0s, opacity 0.5s linear;
+            height: auto;
+        }
+
+        section#ie11,
+        section#thanks,
+        section#thanks.hide,
+        section.hide,
+        .countdown.hide,
+        .ie11 section {
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+        }
+
+        section#thanks.show,
+        section.show,
+        .ie11 section#ie11 {
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+        }
+
+        .countdown {
+            background-color: #000;
+            color: #fff;
+            border-radius: 10px;
+            font-size: 1.4em;
+            text-align: center;
+            margin-bottom: 2em;
+            padding: 1em;
+        }
+
+        header .countdown {
+            position: absolute;
+            top: 20px;
+        }
+
+        main .countdown {
+            font-size: 1.3em;
+        }
+
+        #claim,
+        #thanks {
+            margin-bottom: 40px;
+        }
+
+        #claim p,
+        #thanks p,
+        #ie11 p {
+            padding: 20px 0;
+        }
+
+        #form .alert {
+            display: none;
+        }
+
+        #form.error .alert {
+            display: block;
+        }
+
+        button>.loading {
+            display: none;
+        }
+
+        button.loading>.quiet {
+            display: none;
+        }
+
+        button.loading>.loading {
+            display: block;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 2em;
+        }
+
+        h1 small {
+            color: #E6241D;
+            text-transform: none;
+        }
+
+        h2,
+        h3 {
+            color: #fddb20;
+            font-weight: 900;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .custom-select {
+            width: auto;
+        }
+
+        label {
+            font-weight: 300;
+        }
+
+        @media (min-width: 576px) {
+            label {
+                text-align: right;
+            }
+
+            label.form-check-label,
+            label.custom-control-label {
+                text-align: left;
+            }
+        }
+
+        .btn {
+            padding: 0.2rem 0.75rem;
+            margin-top: 3px;
+        }
+
+        .btn-success {
+            background-image: linear-gradient(to bottom, #a0cc92 0%, #66ac60 60%);
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .btn-success:hover {
+            background-image: linear-gradient(to bottom, #66ac60 0%, #55964f 60%);
+        }
+
+        .social {
+            list-style: none;
+        }
+
+        .social li {
+            display: inline;
+            margin-right: 40px;
+        }
+
+        .linea {
+            border-top: 3px solid black;
+            height: 2px;
+            max-width: 10%;
+            padding: 0;
+            margin: 20px auto 0 auto;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            padding: 50px 0 30px;
+            position: relative;
+            background-color: #fff;
+        }
+
+        footer .green-line {
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        footer .container {
+            position: relative;
+        }
+
+        footer img {
+            max-width: 120px;
+        }
+
+        .logo {
+            position: absolute;
+            top: -110px;
+        }
+
+        .logo img {
+            max-width: 90px;
+        }
+
+        .legal {
+            position: relative;
+            left: 30%;
+            color: #000;
+            font-size: 0.9rem;
+            text-decoration: underline;
+        }
+
+        @media (min-width: 960px) {
+            header a.claim {
+                position: absolute;
+                bottom: 2.5rem;
+                left: calc(50% - 48px);
+                display: block;
+                margin: 0 auto;
+                color: #fff;
+            }
+
+            header a.claim:hover {
+                color: #eee;
+                text-decoration: none;
+            }
+
+            header a.claim::before {
+                animation: bounce 1s ease infinite;
+                bottom: -4rem;
+                color: #fff;
+                content: '╲╱';
+                font-size: 1rem;
+                height: 4.5rem;
+                left: 50%;
+                letter-spacing: -1px;
+                line-height: 4rem;
+                margin-left: -3rem;
+                opacity: 0.8;
+                position: absolute;
+                text-align: center;
+                width: 6rem;
+            }
+
+            header .social {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: block;
+            }
+
+            header .social li {
+                margin-right: 20px;
+            }
+
+            header .social img {
+                max-width: 30px;
+            }
+        }
+
+        @media (min-width: 576px) {
+            footer img {
+                max-width: 100%;
+            }
+
+            .logo {
+                position: absolute;
+                top: -157px;
+                left: calc(50% - 132px);
+            }
+
+            .logo img {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 700px) {
+            img.logos {
+                width: 80px !important;
+            }
+
+            div.fecha {
+                padding: 10px !important;
+            }
+        }
+
+        @keyframes bounce {
+            50% {
+                transform: translateY(-20%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+
+        .text-info {
+            color: #010101 !important;
+        }
+
+        .background-info {
+            background-color: #eaeaea;
+            display: block;
+            padding: 15px;
+            color: #000;
+        }
+    </style>
+    <!-- <script src="//e00-apps-ue.uecdn.es/tms/js/tms-marca.js"></script> -->
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-sm-12 col-md-6" style="margin-top: 38px; margin-bottom: 20px;">
+            <a href="https://www.expansion.es/" style="padding-left: 80px !important;" rel="noopener"><img
+                    src="https://static.conferenciasyformacion.com/images/1618837562_logo-expansion-copy.png"
+                    width="170px" alt="Expansion" /></a>
+        </div>
+        <div class="col-sm-12 col-md-6 text-right" style="margin-top: 20px; margin-bottom: 20px;">
+            <a href="https://www.americanexpress.com" style="padding-right: 20px;" rel="noopener"><img
+                    src="https://static.conferenciasyformacion.com/images/1636980288_american-express.png" width="170px"
+                    alt="Santander" class="img-fluid logos" /></a>
+
+            <a href="https://www.microsoft.com/es-es" style="padding-right: 20px !important;" rel="noopener"><img
+                    src="https://static.conferenciasyformacion.com/images/1636978881_microsoft.png" width="180px"
+                    alt="Microsoft" class="img-fluid logos" /></a>
+
+            <a href="https://home.kpmg/es/es/home.html" style="padding-right: 80px !important;" rel="noopener"><img
+                    src="https://static.conferenciasyformacion.com/images/1636978868_kpmg.png" width="180px" alt="KPMG"
+                    class="img-fluid logos" /></a>
+        </div>
+
+    </div>
+    <header>
+        <div class="container" style="padding: 70px 0">
+            <div style="margin-bottom: 100px;">
+                <div>
+                    29 y 30 de noviembre de 2021 desde las 09:15h a 14:00h<br>
+                </div>
+                <h1>XII Encuentro sector financiero</h1>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h4 style="text-align: center; color: #000">29 de noviembre</h4>
+                    <div class="linea"></div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/6DF_EUIoVnE"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4 style="text-align: center; color: #000">30 de noviembre</h4>
+                    <div class="linea"></div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="1280" height="720" src="https://www.youtube.com/embed/mfDHJnCNyyA"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9">
+                <!-- <iframe width="1280" height="720" src="https://www.youtube.com/embed/7OrmYE8ETs4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe> -->
+            </div>
+        </div>
+    </header>
+    <!-- <main class="container">
+        <section id="ie11">
+            <div class="row">
+                <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                    <h2>Navegador no Soportado</h2>
+                    <p class="text-center">Por favor, utiliza un navegador más moderno, por ejemplo, Edge, Chrome o
+                        Firefox.</p>
+                </div>
+            </div>
+        </section>
+        <section id="main">
+            <div class="row">
+                <div class="col">
+                    <div class="">
+                        29 y 30 de noviembre de 2021 desde las 09:15h a 14:00h<br>
+                    </div>
+                    <h1>XII Encuentro sector financiero</h1>
+                </div>
+            </div> 
+             <div class="row">
+                <div class="col">
+                    <table class="table agenda">
+                        <tbody>
+                            <tr>
+                                <td>9:45h</td>
+                                <td>
+                                    <h4 class="text-info">Bienvenida
+                                    </h4>
+                                    <p><strong>Nicolás Menéndez Sarriés</strong>. Redactor. EXPANSIÓN</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10:00h</td>
+                                <td>
+                                    <h4 class="background-info">LA INNOVACIÓN DEL SECTOR EN PANDEMIA
+                                    </h4>
+                                    <ul>
+                                        <li>Economía de pandemia y desafíos post covid</li>
+                                        <li>La importancia de la educación digital y financiera</li>
+                                        <li>La tecnología como elemento fundamental de comunicación ante la nueva
+                                            situación</li>
+                                        <li>Innovación y revolución tecnológica de bancos y asesores </li>
+                                    </ul>
+                                    <br />
+                                    <ul>
+                                        <li><strong>D. Salvo Laporta</strong>. Director Comercial. BANCO MEDIOLANUM</li>
+                                        <li><strong>Dña. Berta Ares</strong>. Directora General. BME INNTECH</li>
+                                        <li><strong>D. Josep Soler</strong>. Delegado Ejecutivo. EFPA ESPAÑA. Consejero.
+                                            EFPA Europa</li>
+                                        <li><strong>D. Fernando Ibáñez</strong>. Presidente. ASEAFI</li>
+                                    </ul>
+
+                                    <p><strong>Modera: Nicolás Menéndez Sarriés</strong>. Redactor. EXPANSIÓN</li>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11:00h</td>
+                                <td>
+                                    <h4 class="background-info">DÓNDE INVERTIR EN TIEMPOS INCIERTOS
+                                    </h4>
+                                    <ul>
+                                        <li>Optimizar carteras de renta fija</li>
+                                        <li>Renta variable: oportunidades y riesgos de los mercados (abierto)</li>
+                                        <li>Estrategia climática y política de carbono</li>
+                                        <li>Megatendencias, ¿seguirán batiendo índices globales?</li>
+                                    </ul>
+                                    <br />
+                                    <ul>
+                                        <li><strong>D. Leonardo López</strong>. Country Head Iberia y Latam. ODDO BHF AM
+                                        </li>
+                                        <li><strong>D. Ricardo Comín</strong>. Director de Ventas. VONTOBEL AM</li>
+                                        <li><strong>D. Santiago Matossian</strong>. Sales Director. AXA IM</li>
+                                        <li><strong>D. Bruno Ruiz de Velasco</strong>. Senior Sales Manager. NATIXIS IM
+                                        </li>
+                                        <li><strong>D. Mikko Ripatti</strong>. Responsable de Ventas. ESPAÑA DNB AM</li>
+
+                                    </ul>
+                                    <p><strong>Modera: Susana Criado</strong>. Periodista especializada en información
+                                        financiera.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12:00h</td>
+                                <td>
+                                    <h4 class="text-info">Fin del evento
+                                    </h4>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <div class="row">
+                        <div class="col" style="font-size: 1.3em">
+                            <i class="far fa-clock float-left fa-3x" style="margin-right: 2vh;"></i>
+                            <a href="calendar.ics" class="text-green">22 de junio de 2021<br>de 9:45 a 12:00h</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>
+    </main> -->
+
+    <!-- <footer>
+        <div class="red-line big mb-5"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-xs-12" style="text-align: left; padding-top: 20px;">
+                    <a href="www.expansion.com" target="_blank" rel="noopener"><img
+                            src="https://foro.expansion.com/assets/img/expansion-35.png" alt="Expansion 35"
+                            width="40%" /></a>
+                </div>
+                <div class="col-sm-12 col-md-4 col-xs-12" style="text-align: center;">
+                    
+                </div>
+                <div class="col-sm-12 col-md-4 col-xs-12" style="text-align: right;">
+                    <a href="https://www.construcia.com/" target="_blank" rel="noopener"><img
+                            src="https://static.conferenciasyformacion.com/images/1620657453_logo-construcia.png"
+                            alt="Construcia" width="40%" /></a>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" language="javascript" src="https://e00-ue.uecdn.es/cookies/js/policy_v3_utf8.js"></script>
+        <script type="text/javascript" src="https://sdk.privacy-center.org/loader.js" data-key="03f1af55-a479-4c1f-891a-7481345171ce" id="spcloader" async></script>
+        <script type="text/javascript" language="javascript" src="https://e00-ue.uecdn.es/cookies/js/gdpr_dfp.js"></script>
+        <script>
+            TMSBottom();
+        </script> -->
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Nov 5, 2020 18:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.querySelectorAll('.countdown span').forEach(function (el) {
+                el.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            });
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.querySelectorAll('.countdown').forEach(function (el) {
+                    this.classList.add('hide');
+                });
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
